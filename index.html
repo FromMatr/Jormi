@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,90 +34,72 @@
             display: flex;
             gap: 2rem;
         }
-        
+
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
-        
+
         nav a:hover, .categoria a:hover {
-            color: #000; 
+            color: #000;
         }
 
         .banner {
             text-align: center;
             padding: 3rem;
-            background-image: url('banner.jpg'); 
+            background-image: url('banner.jpg');
             background-size: cover;
             color: black;
         }
 
         .categorias {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 2rem 0;
-}
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem 0;
+        }
 
-
-.categoria {
-    width: 200px;
-    height: 200px;
-    margin: 1rem;
-    padding: 1rem;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s;
-    overflow: hidden;
-}
-
-@media (max-width: 768px) {
-    .categoria {
-        width: 45%; 
-        margin: 1rem 0.5rem;
-    }
-}
-
-
-@media (max-width: 576px) {
-    .categoria {
-        width: 100%; 
-        margin: 0.5rem 0;
-    }
-}
-
+        .categoria {
+            width: 200px;
+            height: 200px;
+            margin: 1rem;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
 
         .categoria:hover {
             transform: scale(1.05);
         }
 
         .swiper-container {
-    width: 100%;
-    height: 200px; 
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.swiper-slide img {
-    width: auto; 
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 8px;
-}
-
+        .swiper-slide img {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+        }
 
         .whatsapp {
             text-align: center;
@@ -147,9 +128,34 @@
             width: 40px;
             margin: 0.5rem;
         }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 576px) {
+            .categoria {
+                width: 150px;
+                height: 150px;
+                margin: 0.5rem;
+            }
+            
+            .swiper-container {
+                height: 150px;
+            }
+
+            .whatsapp a {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .logo {
+                width: 150px;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
-
 <body>
     <header>
         <img class="logo" src="https://i.postimg.cc/1zbHR0MK/Captura-de-pantalla-2024-10-06-121320.png" alt="JorMi Joyería">
@@ -235,7 +241,7 @@
 
     <footer>
         <h3>¡Síguenos en nuestras redes sociales!</h3>
-        <div class="redes-sociales">        
+        <div class="redes-sociales">
             <img src="https://i.pinimg.com/originals/70/b9/3a/70b93af70f637f2d8a2dec42bfcf23f8.jpg" alt="Facebook">
             <img src="https://th.bing.com/th/id/OIP.aW-aOZNPCqeqI9Cp_tRB6wHaHa?w=178&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Instagram">
         </div>
@@ -251,10 +257,8 @@
             }
         });
     </script>
-    
 </body>
 </html>
-
 
 
 
