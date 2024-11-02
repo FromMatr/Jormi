@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JorMi Joyería</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,18 +41,11 @@
             text-decoration: none;
             font-weight: bold;
         }
-        nav a, .categoria a {
-        text-decoration: none;
-        color: inherit;
-        }
-
+        
         nav a:hover, .categoria a:hover {
-        color: #000; 
+            color: #000; 
         }
 
-        nav a:visited, .categoria a:visited {
-        color: inherit; 
-        }
         .banner {
             text-align: center;
             padding: 3rem;
@@ -66,7 +62,8 @@
         }
 
         .categoria {
-            width: 300px;
+            width: 200px;
+            height: 200px;
             margin: 1rem;
             padding: 1rem;
             background-color: white;
@@ -74,17 +71,37 @@
             border-radius: 8px;
             text-align: center;
             transition: transform 0.3s;
+            overflow: hidden;
         }
 
         .categoria:hover {
             transform: scale(1.05);
         }
 
-        .categoria img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+        .swiper-container {
+    width: 100%;
+    height: 200px; 
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: auto; 
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
 
         .whatsapp {
             text-align: center;
@@ -164,10 +181,23 @@
         </div>
         <div class="categoria">
             <a href="anillos.html">
-                <img src="https://i.postimg.cc/K8jDxhp6/Whats-App-Image-2024-10-30-at-2-32-20-PM-1.jpg" alt="Anillos">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://i.postimg.cc/NG8cnr8X/Whats-App-Image-2024-10-30-at-3-45-02-PM.jpg" alt="Anillo 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://i.postimg.cc/yYfwqhDD/Whats-App-Image-2024-10-30-at-3-45-03-PM.jpg" alt="Anillo 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://i.postimg.cc/fRJ1M3dB/Whats-App-Image-2024-10-30-at-3-45-03-PM-1.jpg" alt="Anillo 3">
+                        </div>
+                    </div>
+                </div>
                 <h3>Anillos</h3>
             </a>
         </div>
+        
         <div class="categoria">
             <a href="tobillera.html">
                 <img src="tobillera.jpg" alt="Tobillera">
@@ -194,9 +224,20 @@
         </div>
         <p>&copy; 2024 Joyería JorMi. Todos los derechos reservados.</p>
     </footer>
-
+    
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            }
+        });
+    </script>
+    
 </body>
 </html>
+
 
 
 
